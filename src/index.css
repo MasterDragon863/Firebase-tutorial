@@ -1,0 +1,7 @@
+@import 'tailwindcss';
+
+@layer components{
+  .App{
+    @apply text-3xl text-center mt-4 ;
+  }
+}
