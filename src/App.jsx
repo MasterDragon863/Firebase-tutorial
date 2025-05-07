@@ -1,8 +1,13 @@
 import React from 'react'
+import Auth from './components/Auth'
 
 const App = () => {
   return (
-    <div className="App">Firebase Course</div>
+    <div className="App">
+      <Auth />
+
+      <button></button>
+    </div>
   )
 }
 
