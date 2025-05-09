@@ -25,4 +25,8 @@ body{
   .container-center{
     @apply justify-center items-center flex flex-col w-auto h-auto ;
   }
+
+  .btn{
+    @apply hover:bg-blue-200 dark:hover:bg-blue-800
+  }
 }
