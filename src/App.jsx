@@ -1,6 +1,6 @@
 import React from "react";
 import Auth from "./components/Auth";
-import { db } from "./config/firebase";
+import { db, auth } from "./config/firebase";
 import { useState, useEffect } from "react";
 import {
   collection,
@@ -43,7 +43,8 @@ const App = () => {
       await addDoc(movieCollectionRef, {
         title: newMovieTitle,
         releaseYear: newReleaseYear,
-        Oscar: isNewMovieOscar,
+        oscar: isNewMovieOscar,
+        userId: auth?.currentUser?.uid
       });
 
       getMovieList();
@@ -109,7 +110,7 @@ const App = () => {
             <h1 className="text-5xl ">{movie.title}</h1>
             <p>Date: {movie.releaseYear}</p>
             <p>
-              {movie.Oscar ? "Recieved an Oscar" : "Did not recieve an Oscar"}
+              {movie.oscar ? "Recieved an Oscar" : "Did not recieve an Oscar"}
             </p>
 
             <button
