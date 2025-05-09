@@ -1,5 +1,9 @@
 @import 'tailwindcss';
 
+body{
+  @apply dark:bg-[#1F293C] dark:text-white;
+}
+
 @layer components{
   .App{
     @apply text-3xl text-center mt-4 ;
@@ -8,6 +12,17 @@
 
 @layer utilities{
   .border-gray-solid{
-    @apply border-solid border-2 border-gray-500 rounded-md w-auto px-1 m-2
+    @apply border-solid border-2 border-gray-500 rounded-md w-auto px-1 m-2;
+  }
+  .border-black-solid{
+    @apply border-solid border-2 border-black rounded-md w-auto px-1 m-2
+  }
+  
+  .movieCard{
+    @apply bg-gray-200 p-5 rounded-2xl shadow-inner mx-4 w-auto m-2 dark:bg-gray-700;
+  }
+
+  .container-center{
+    @apply justify-center items-center flex flex-col w-auto h-auto ;
   }
 }
